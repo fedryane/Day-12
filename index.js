@@ -31,6 +31,7 @@ app.get("/home", function(req, res){
             if (err) throw err
             let data = result.rows
             
+            
             data = data.map(function (item) {
                 return {
 
