@@ -31,7 +31,7 @@ app.get("/home", function(req, res){
             if (err) throw err
             let data = result.rows
             
-            
+
             data = data.map(function (item) {
                 return {
 
@@ -118,26 +118,77 @@ let distanceSeconds = Math.floor(distance / miliseconds)
 
 
 
-if (distanceYear > 0) {
-    return`${distanceYear} Year`
-} else if (distanceMonth > 0) {
-    return`${distanceMonth} Month`
-} else if(distanceDay > 0) {
-    return `${distanceDay} day`
-} else if(distanceHours > 0) {
-    return `${distanceHours} hours`
-} else if(distanceMinutes > 0) {
-    return `${distanceMinutes} minutes`
-} else {
-    return `${distanceSeconds} seconds`
+    if (distanceYear > 0) {
+        return`${distanceYear} Year`
+    } else if (distanceMonth > 0) {
+        return`${distanceMonth} Month`
+    } else if(distanceDay > 0) {
+        return `${distanceDay} day`
+    } else if(distanceHours > 0) {
+        return `${distanceHours} hours`
+    } else if(distanceMinutes > 0) {
+        return `${distanceMinutes} minutes`
+    } else {
+        return `${distanceSeconds} seconds`
+    }
+}
+
+function getFullTime(waktu) {
+
+    let month = ['Januari', 'Febuari', 'March', 'April', 'May', 'June', 'July', 'August', 'Sept', 'October', 'November', 'December']
+
+    let date = waktu.getDate()
+
+    let monthIndex = waktu.getMonth()
+
+    let year = waktu.getFullYear()
+
+    let hours = waktu.getHours()
+
+    let minutes = waktu.getMinutes()
+
+    let dateTime = `${date} ${month[monthIndex]} ${year}`
+
+    return dateTime
 }
 
 
-}
+app.get("/detail-blog/:id", function(req, res){
+    const id = parseInt (req.params.id)
+    
+    
+    db.connect(function (err, client, done){
+        if (err) throw err
 
+        client.query("SELECT * FROM tb_projects WHERE id=$1",[id], function(err, result){
+              let data = result.rows
+            // if (err) throw err
 
-app.get("/detail-blog", function(req, res){
-    res.render("detail-blog")
+            data = data.map(function (item) {
+                return {
+
+                    ...item,
+                    projectName: item.name,
+                    description: item.description,
+                    startDate: getFullTime(item.start_date),
+                    endDate: getFullTime(item.end_date),
+                    duration: getDistanceTime(item.start_date,item.end_date),
+                    nodejs: checkboxes(item.technologies[0]),
+                    reactjs: checkboxes(item.technologies[1]),
+                    java: checkboxes(item.technologies[2]),
+                    python: checkboxes(item.technologies[3]),
+ 
+                } 
+                
+            })
+            
+            res.render("detail-blog", {blogs: data})
+            console.log(result.rows);
+
+        })
+    })
+    
+
 })
 
 app.get("/detail-blog/:index", function(req, res){
@@ -189,10 +240,10 @@ function checkboxes(render){
 }
 
 
-app.get("/delete-blog/:index", function(req, res){
+app.get("/delete-blog/:id", function(req, res){
 
-    let index = req.params.index
-    blogs.splice(index,1)
+    const id = parseInt(req.params.id)
+    blogs.splice(id,1)
     res.redirect("/home")  
 })
 
