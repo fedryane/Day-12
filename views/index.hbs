@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Navbar & Layouting</title>
+    <link rel="stylesheet" href="../public/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <img src="public/brandred.png" alt="logo">
+            <ul>
+                <li>
+                    <a href="/home" id="homepage">Home</a>
+                </li>
+                <li>
+                    <a href="/add-blog">My Project</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="nav-right">
+            <a href="/form">Contact Me</a>
+        </div>        
+    </nav>
+
+    <div class="container">
+        <section>
+            <div class="section-left">
+                <div class="info">
+                    <h1>Hi Welcome to my hut</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ut corrupti aliquam quibusdam deleniti praesentium explicabo? Aut nisi quia nulla corporis, quisquam perspiciatis doloremque dignissimos fugiat consequuntur ipsam tempore architecto aperiam iusto asperiores dicta minus quo quidem, culpa voluptate? Quam voluptas optio voluptatem reiciendis qui eos cumque ipsa eligendi minus similique exercitationem, quod deserunt expedita veniam accusantium accusamus perspiciatis blanditiis.</p>
+                </div>
+                
+                <div class="contact">
+                    <button>Contact</button>
+                    <a href="test cv.txt">download CV</a>
+                    <img src="public/assets/dl.png" alt="Download">
+                </div>
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/">
+                        <i class="fa-brands fa-instagram-square"></i>
+                     </a>
+                    <a href="https://www.linkedin.com/">
+                        <i class="fa-brands fa-facebook-square"></i>
+                     </a>
+                    <a href="https://www.linkedin.com/">
+                        <i class="fa-brands fa-twitter-square"></i>
+                      </a>
+                </div>
+            </div>
+            
+            <div class="section-right"> 
+                <div class="card">
+                    <img src="public/assets/killua.jpg" alt="killua">
+                    <h3>Lorem Ipsum</h3>
+                    <p>Fullstack Developer</p>
+                </div>  
+            </div>
+        </section>
+        
+    </div>
+         <div class="projects-section">
+          <h2>MY PROJECTS</h2>
+        <div class="projects-cards" id="projects-cards">
+          {{#each blogs}}
+          <div class="cards">
+            <img src="public/assets/map-valorant.jpg" id="image-post" alt="">
+            <a href="/detail-blog/{{@index}}" id="project-name">{{this.projectName}}</a>
+            <p id="duration-post">{{this.duration}}</p>
+            <p id="desc-post">{{this.description}}</p>
+            <div class="logo-post" id="logo-post">
+              {{#if nodejs}}
+              <i class="fa-brands fa-node"></i>
+              {{/if}}
+
+              {{#if reactjs}}
+              <i class="fa-brands fa-react"></i>
+              {{/if}}
+
+              {{#if java}}
+              <i class="fa-brands fa-java"></i>
+              {{/if}}
+
+              {{#if python}}
+              <i class="fa-brands fa-python"></i>
+              {{/if}}
+            </div>
+              <div class="button">
+                <a href="/update-blog/{{@index}}">
+                <button class="btn">edit</button>
+                </a>
+                <a href="/delete-blog/{{@index}}">
+                <button class="btn">delete</button>
+                </a>
+              </div>
+          </div>
+          {{/each}}
+          {{!-- <div class="cards">
+            <img src="public/assets/map-valorant.jpg" id="image-post" alt="">
+            <a href="/detail-blog" id="project-name">Creating blog projects - 2022</a>
+            <p id="duration-post">duration</p>
+            <p id="desc-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima praesentium nisi quibusdam debitis amet sunt, natus nulla ab dolore facere!</p>
+            <div class="logo-post" id="logo-post">
+              <i class="fa-brands fa-node"></i>
+              <i class="fa-brands fa-react"></i>
+              <i class="fa-brands fa-java"></i>
+              <i class="fa-brands fa-python"></i>
+            </div>
+              <div class="button">
+                <button class="btn">edit</button>
+                <button class="btn">delete</button>
+              </div>
+          </div>
+          <div class="cards">
+            <img src="public/assets/map-valorant.jpg" id="image-post" alt="">
+            <a href="/detail-blog" id="project-name">Creating blog projects - 2022</a>
+            <p id="duration-post">duration</p>
+            <p id="desc-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima praesentium nisi quibusdam debitis amet sunt, natus nulla ab dolore facere!</p>
+            <div class="logo-post" id="logo-post">
+              <i class="fa-brands fa-node"></i>
+              <i class="fa-brands fa-react"></i>
+              <i class="fa-brands fa-java"></i>
+              <i class="fa-brands fa-python"></i>
+            </div>
+              <div class="button">
+                <button class="btn">edit</button>
+                <button class="btn">delete</button>
+              </div>
+          </div>
+          <div class="cards">
+            <img src="public/assets/map-valorant.jpg" id="image-post" alt="">
+            <a href="/detail-blog" id="project-name">Creating blog projects - 2022</a>
+            <p id="duration-post">duration</p>
+            <p id="desc-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima praesentium nisi quibusdam debitis amet sunt, natus nulla ab dolore facere!</p>
+            <div class="logo-post" id="logo-post">
+              <i class="fa-brands fa-node"></i>
+              <i class="fa-brands fa-react"></i>
+              <i class="fa-brands fa-java"></i>
+              <i class="fa-brands fa-python"></i>
+            </div>
+              <div class="button">
+                <button class="btn">edit</button>
+                <button class="btn">delete</button>
+              </div>
+          </div>
+          <div class="cards">
+            <img src="public/assets/map-valorant.jpg" id="image-post" alt="">
+            <a href="/detail-blog" id="project-name">Creating blog projects - 2022</a>
+            <p id="duration-post">duration</p>
+            <p id="desc-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima praesentium nisi quibusdam debitis amet sunt, natus nulla ab dolore facere!</p>
+            <div class="logo-post" id="logo-post">
+              <i class="fa-brands fa-node"></i>
+              <i class="fa-brands fa-react"></i>
+              <i class="fa-brands fa-java"></i>
+              <i class="fa-brands fa-python"></i>
+            </div>
+              <div class="button">
+                <button class="btn">edit</button>
+                <button class="btn">delete</button>
+              </div>
+          </div> --}}
+        </div>
+      </div>
+    </body>
+    </html>

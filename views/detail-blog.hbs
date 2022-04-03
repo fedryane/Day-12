@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>detail-project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../public/detail-blog.css">
+    <link rel="stylesheet" href="../public/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <!--navbar-->
+    <nav>
+        <div class="nav-left">
+            <img src="../public/brandred.png" alt="logo">
+            <ul>
+                <li>
+                    <a href="/home" id="homepage">Home</a>
+                </li>
+                <li>
+                    <a href="/add-blog">My Project</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="nav-right">
+            <a href="/form">Contact Me</a>
+        </div>        
+    </nav>
+
+
+    <!--container-->
+    <div class="detail-container">
+        <h1>{{this.projectName}}</h1>
+        <div class="content">
+            <div class="left-content">
+                <img src="../public/assets/map-valorant.jpg" alt="map">
+            </div>
+            <div class="right-content">
+                <div class="duration">
+                    <h3 style="margin: 0px 0px 17px 0px;">duration</h3>
+                    <div class="date-limit">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p>({{this.startDate}}) - ({{this.endDate}})</p>
+                    </div>
+                    <div class="time-limit">
+                        <i class="fa-solid fa-clock"></i>
+                        <p>{{this.duration}}</p>
+                    </div>
+                </div>
+                <h3 style="margin: 10px 0px 10px 0px;">Technologies</h3>
+                <div class="technologies">
+                    <div class="tech-kiri">
+                        <div class="react">
+                             {{#if reactjs}}
+                            <i class="fa-brands fa-react"></i>
+                            <p>React Js</p>
+                            {{/if}}
+                        </div>
+                        <div class="node">
+                             {{#if nodejs}}
+                            <i class="fa-brands fa-node"></i>
+                            <p>node Js</p>
+                            {{/if}}
+                        </div>
+                    </div>
+                    <div class="tech-kanan">
+                        <div class="java">
+                            {{#if java}}
+                            <i class="fa-brands fa-java"></i>
+                            <p>Java</p>
+                            {{/if}}
+                        </div>
+                        <div class="python">
+                             {{#if python}}
+                            <i class="fa-brands fa-python"></i>
+                            <p>Python</p>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+
+        
+        <!--paragraf-->
+        <div class="paragraf">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum minus voluptatem delectus vel eligendi quisquam officia fuga fugit corrupti aut hic accusamus maiores nemo, quaerat, tenetur non dicta omnis nobis perferendis aliquam sequi tempore nam et expedita? Repellendus nulla vero quos neque possimus in facere placeat, nemo, deserunt distinctio quidem eum mollitia, nam debitis aspernatur. <br> <br> quibusdam molestias illo. Sequi eveniet asperiores reiciendis fuga nihil sed aliquam amet repudiandae iste iusto, eligendi similique quae, id ex animi atque unde temporibus cumque hic quo est optio ea. <br> Aspernatur aliquam officia, labore consequuntur minus officiis quae? Non velit exercitationem illo blanditiis obcaecati minima ipsam quae numquam nostrum accusantium dicta saepe tempore id itaque, aspernatur commodi iusto asperiores aliquam possimus ullam magnam natus! <br>Temporibus illo qui quasi, sint dicta blanditiis perferendis ducimus harum aut similique alias hic, libero aliquid. <br> <br> deserunt tempore aliquam voluptas libero a tenetur mollitia commodi omnis magni aut architecto cum earum laboriosam modi nobis voluptatibus, nam odio nostrum dicta optio ea sequi.<br> Commodi cum eius doloribus tempora quidem possimus inventore molestias ratione esse fugiat quis officiis a adipisci, repellat dolores, laudantium minus eos eveniet rem porro voluptatibus et.<br> Pariatur reiciendis assumenda blanditiis numquam tenetur eius vitae voluptates reprehenderit!</p>
+        </div> 
+    </div>
+
+
+</body>
+</html>

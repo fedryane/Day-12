@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Creating Form</title>
+    <link rel="stylesheet" href="public/style.css">
+    <script src="public/form.js"></script>
+
+</head>
+<body style="background-color: rgb(230, 230, 230);">
+
+    <nav>
+        <div class="nav-left">
+            <img src="public/brandred.png" alt="logo">
+            <ul>
+                <li>
+                    <a href="/home" id="homepage">Home</a>
+                </li>
+                <li>
+                    <a href="/add-blog">My Project</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="nav-right">
+            <a href="/form">Contact Me</a>
+        </div>        
+    </nav>
+
+    <h1 style="text-align: center;
+margin-top:100px;
+font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: bold;">GET IN TOUCH</h1>
+
+<form style="width: 500px;
+margin: 150px auto;
+margin-top: 90px;">
+
+
+    <div>
+        <label for="name" style="font-weight:bold;
+        font-size:20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Name</label>
+        <input type ="text" id="name"
+            style="width: 100%;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid rgb(212, 212, 212);
+            margin-top: 8px;
+            box-shadow: 0px 2px 5px rgb(150, 150, 150);"/>
+    </div>
+    
+    <div style="margin-top: 30px;">
+        <label for="email-input" style="font-weight:bold;
+        font-size:20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Email</label>
+        <input type ="email" id="email-input"
+        style="width: 100%;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid rgb(212, 212, 212);
+            margin-top: 8px;
+            box-shadow: 0px 2px 5px rgb(150, 150, 150);"/>
+    </div>  
+    
+    <div style="margin-top: 30px;">
+        <label for="phone-number" style="font-weight:bold;
+        font-size:20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Phone Number</label>
+        <input type ="number" id="phone-number"
+        style="width: 100%;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid rgb(212, 212, 212);
+            margin-top: 8px;
+            box-shadow: 0px 2px 5px rgb(150, 150, 150);"/>
+    </div>
+    
+    <div style="margin-top: 30px;">
+        <label for="subject-input" style="font-weight:bold;
+        font-size:20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Subject</label>
+        <select id="subject-input" style="width: 104.5%;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid rgb(212, 212, 212);
+            margin-top: 8px;
+            box-shadow: 0px 2px 5px rgb(150, 150, 150);">
+            <option></option>
+            <option>I am Hiring</option>
+            <option>Lets Collaboration</option>
+        </select>  
+    </div> 
+    
+    <div style="margin-top: 30px;">
+        <label for="text-input" style="font-weight:bold;
+        font-size:20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Your Message</label>
+        <textarea id="text-input" 
+        style="width: 100%;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid rgb(212, 212, 212);
+            margin-top: 8px;
+            height: 120px;
+            resize: vertical;
+            box-shadow: 0px 2px 5px rgb(150, 150, 150);"></textarea>
+    </div>
+    
+    
+    <button onclick="submitData()" type="button" style="background-color: rgb(10, 10, 10);
+    margin-top: 35px;
+    padding: 7px 35px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 15px;
+    margin-left: 400px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 0px 2px 5px rgb(150, 150, 150);
+    cursor: pointer;">Submit</button>
+    
+</form>
+
+</body>
+
+</html>

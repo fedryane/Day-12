@@ -1,0 +1,271 @@
+body {
+  margin: 0;
+  background-color: rgb(206, 206, 206);
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  display: flex;
+  background-color: rgb(241, 227, 227);
+}
+
+.nav-left {
+  flex: 50%;
+  padding-left: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-left li {
+  display: inline;
+  font-weight: 500;
+}
+
+.nav-left img {
+  height: 40px;
+  padding-top: 2px;
+}
+
+.nav-left ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+  margin-top: 25px;
+}
+
+#homepage {
+  font-weight: bolder;
+}
+
+.nav-right {
+  flex: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px 20px;
+  margin-right: 100px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.container section {
+  display: flex;
+  width: 900px;
+  height: 530px;
+  padding: 70px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(208, 204, 204, 0.973);
+}
+
+.section-right {
+  flex: 17%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.section-left {
+  flex: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  padding-top: 20px;
+}
+
+.contact button {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 5px 35px;
+  font-size: 16px;
+}
+
+.contact a {
+  text-decoration: none;
+  color: black;
+  padding-left: 20px;
+  font-weight: bold;
+}
+
+.contact img {
+  height: 30px;
+  position: absolute;
+  padding-top: 1px;
+  padding-left: 7px;
+  width: 30px;
+}
+
+.social-media {
+  padding-top: 30px;
+  text-decoration: none;
+}
+
+.social-media i {
+  padding: 10px;
+  height: 1px;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.social-media a {
+  text-decoration: none;
+  color: black;
+}
+
+.info p {
+  text-align: justify;
+  font-size: 20px;
+  padding-right: 50px;
+}
+
+.card {
+  background-color: white;
+  width: 350px;
+  box-shadow: 0px 2px 5px rgba(131, 80, 80, 0.973);
+  border-radius: 7px;
+  text-align: center;
+}
+
+.card img {
+  width: 350px;
+}
+
+.projects-section {
+  background-color: white;
+  width: 100%;
+}
+
+.projects-section h2 {
+  text-align: center;
+  padding: 5%;
+}
+
+.projects-cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px auto;
+  padding: 70px auto;
+  gap: 10px;
+}
+
+.cards {
+  width: 28%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 8px #0000004f;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 18px;
+}
+
+.cards img {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.cards a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+#duration-post {
+  opacity: 0.5;
+  color: black;
+}
+
+#desc-post {
+  text-align: justify;
+  font-size: 15px;
+  width: 100%;
+}
+
+.logo-post {
+  font-size: 30px;
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.btn {
+  width: 45%;
+  padding: 5px 10px;
+  border-radius: 12px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: 100;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button a {
+  width: 45%;
+  padding: 5px 10px;
+  border-radius: 12px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: 100;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button a:hover {
+  width: 45%;
+  padding: 5px 10px;
+  border-radius: 12px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-weight: 100;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+.btn:hover{
+  width: 45%;
+  padding: 5px 10px;
+  border-radius: 12px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-weight: 100;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  cursor: pointer;
+}

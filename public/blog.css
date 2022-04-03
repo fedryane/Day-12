@@ -1,0 +1,302 @@
+body {
+  margin: 0;
+  background-color: rgb(206, 206, 206);
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  display: flex;
+  background-color: rgb(241, 227, 227);
+}
+
+.nav-left {
+  flex: 50%;
+  padding-left: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-left li {
+  display: inline;
+  font-weight: 500;
+}
+
+.nav-left img {
+  height: 40px;
+  padding-top: 2px;
+}
+
+.nav-left ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+  margin-top: 25px;
+}
+
+#homepage {
+  font-weight: bolder;
+}
+
+.nav-right {
+  flex: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px 20px;
+  margin-right: 100px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.form-project {
+  width: 400px;
+  height: 100vh;
+  margin: 40px auto;
+  font-weight: bold;
+}
+
+.form-project h2 {
+  text-align: center;
+  font-weight: 500px;
+  padding-top: 20px;
+}
+
+.form-tittle {
+  margin-top: 10px;
+}
+
+.form-box {
+  width: 100%;
+  padding-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  height: 32px;
+  box-shadow: 2px 1px 10px #5553534f;
+}
+
+.form-date {
+  margin-top: 10px;
+}
+
+.date {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.start-date {
+  width: 40%;
+}
+
+.end-date {
+  width: 40%;
+}
+
+.form-desc {
+  margin-top: 10px;
+}
+
+.textarea-box {
+  width: 100%;
+  padding-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  height: 150px;
+  box-shadow: 2px 1px 10px #8888884f;
+  resize: vertical;
+}
+
+.form-tech {
+  margin-top: 5px;
+}
+
+.tech {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tech-left {
+  width: 50%;
+}
+
+.tech-left div {
+  margin: 15px 0;
+}
+
+.tech-left label {
+  color: rgb(63, 60, 60);
+}
+
+.tech-right {
+  width: 50%;
+}
+.tech-right div {
+  margin: 15px 0;
+}
+
+.tech-right label {
+  color: rgb(63, 60, 60);
+}
+
+.input-image {
+  width: 100%;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0px 0px 7px rgb(168, 166, 166);
+}
+
+.input-image label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.input-image label p {
+  width: 20%;
+  padding-left: 19px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: #f4f3f3;
+  border: 1px solid #868585;
+  border-radius: 7px;
+  font-weight: normal;
+}
+
+.input-image label i {
+  width: 20%;
+  text-align: right;
+  margin-right: 16px;
+  font-size: 24px;
+  color: #8a8787;
+}
+
+.btn-submit {
+  display: flex;
+  justify-content: flex-end;
+  height: auto;
+  margin-top: 20px;
+}
+
+.button-submit {
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 8px 35px;
+  border: none;
+  font-weight: normal;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button-submit:hover {
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 8px 35px;
+  border: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.projects-section {
+  background-color: white;
+  width: 100%;
+}
+
+.projects-section h2 {
+  text-align: center;
+  padding: 5%;
+}
+
+.projects-cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px auto;
+  padding: 70px auto;
+  gap: 10px;
+}
+
+.cards {
+  width: 28%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 8px #0000004f;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 18px;
+}
+
+.cards img {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.cards a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+#duration-post {
+  opacity: 0.5;
+  color: black;
+}
+
+#desc-post {
+  text-align: justify;
+  font-size: 15px;
+  width: 100%;
+}
+
+.logo-post {
+  font-size: 30px;
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.btn {
+  width: 45%;
+  padding: 5px 10px;
+  border-radius: 12px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: 100;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn:hover {
+  width: 45%;
+  padding: 5px 10px;
+  border-radius: 12px;
+  border: none;
+  background-color: rgb(177, 177, 177);
+  color: black;
+  font-weight: 100;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
