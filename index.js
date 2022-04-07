@@ -139,7 +139,7 @@ app.post("/add-blog", upload.single("image"), function (req, res) {
 
     // blogs.push(data);
     // console.log(data);
-    res.redirect("/home");
+    res.redirect("/");
   });
 });
 // ---------------------------------------------FUNCTION WAKTU------------------------------------------------------//
@@ -269,7 +269,7 @@ app.post("/update-blog/:id", upload.single("image"), function (req, res) {
       function (err, result) {
         if (err) throw err;
 
-        res.redirect("/home");
+        res.redirect("/");
       }
     );
   });
@@ -298,7 +298,7 @@ app.get("/delete-blog/:id", function (req, res) {
       if (err) throw err;
       done();
 
-      res.redirect("/home");
+      res.redirect("/");
     });
   });
 });
@@ -387,7 +387,7 @@ app.post("/login", function (req, res) {
           });
 
         req.flash("success", "login Success");
-        res.redirect("/home");
+        res.redirect("/");
       } else {
         // console.log("login invalid");
         req.flash("danger", "login Invalid");
@@ -399,7 +399,7 @@ app.post("/login", function (req, res) {
 // ---------------------------------------------logout-------------------------------------------------- //
 app.get("/logout", function (req, res) {
   req.session.destroy();
-  res.redirect("/home");
+  res.redirect("/");
 });
 
 app.listen(port, function () {
