@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-    <script src="blog.js"></script>
+    
     
     
 </head>
@@ -27,7 +27,9 @@
         </div>
         
         <div class="nav-right">
-            <a href="/form">Contact Me</a>
+            <a href="/register" class="register">Register</a>
+            <a href="/login" class="login">Login</a>
+            <a href="/form" class="form">Contact Me</a>
         </div>        
     </nav>
 
@@ -43,10 +45,11 @@
 
           
             <!--projectName-->
-            <form action="/update-blog/{{index}}" method="post">
+           {{!-- {{#each blogs}} --}}
+            <form action="/update-blog/{{this.id}}" method="post" enctype="multipart/form-data">
               <div class="form-title">
                 <label for="projectName">Project Name</label>
-                <input value="{{project.projectName}}" type="text" class="form-box" id="projectName" name="projectName">
+                <input value="{{update.name}}" type="text" class="form-box" id="projectName" name="projectName">
               </div>
 
 
@@ -56,11 +59,11 @@
                 <div class="date">
                   <div class="start-date">
                     <label for="startDate">Start Date</label>
-                    <input type="Date" id="startDate" class="form-box" name="startDate" value="{{project.startDate}}">
+                    <input type="Date" id="start_date" class="form-box" name="start_date" value="{{update.start_date}}">
                   </div>
                   <div class="end-date">
                     <label for="endDate">End Date</label>
-                    <input type="Date" id="endDate" class="form-box" name="endDate" value="{{project.endDate}}">
+                    <input type="Date" id="end_date" class="form-box" name="end_date" value="{{update.end_date}}">
                   </div>
                 </div>
               </div>
@@ -70,7 +73,7 @@
             <!--Description-->
               <div class="form-desc">
                 <label for="description" style="font-weight: bold;">Description</label>
-                <textarea id="description" class="textarea-box" name="description">{{project.description}}</textarea>
+                <textarea id="description" class="textarea-box" name="description">{{update.description}}</textarea>
               </div>
       
 
@@ -83,11 +86,11 @@
                 <!--left section tech-->
                   <div class="tech-left">
                     <div class="nodejs">
-                      <input type="checkbox" id="nodejs"  name="nodejs" value="true" {{#if project.nodejs}} checked {{/if}} >
+                      <input type="checkbox" id="nodejs"  name="nodejs" value="true" {{#if update.nodejs}} checked {{/if}} >
                       <label for="nodejs">Node JS</label>
                     </div>
                     <div class="reactjs">
-                      <input type="checkbox" id="reactjs"  name="reactjs" value="true" {{#if project.reactjs}} checked {{/if}} >
+                      <input type="checkbox" id="reactjs"  name="reactjs" value="true" {{#if update.reactjs}} checked {{/if}} >
                       <label for="reactjs">React JS</label>
                     </div>
                   </div>
@@ -97,11 +100,11 @@
                   <!-- right section tech -->
                   <div class="tech-right">
                     <div class="java">
-                      <input type="checkbox" id="java"  name="java" value="true" {{#if project.java}} checked {{/if}}>
+                      <input type="checkbox" id="java"  name="java" value="true" {{#if update.java}} checked {{/if}}>
                       <label for="java">Java</label>
                     </div>
                     <div class="python">
-                      <input type="checkbox" id="python"  name="python" value="true" {{#if project.python}} checked {{/if}}>
+                      <input type="checkbox" id="python"  name="python" value="true" {{#if update.python}} checked {{/if}}>
                       <label for="python">Python</label>
                     </div>
                   </div>
@@ -118,7 +121,7 @@
                     <p>Choose</p>
                     <i class="fa-solid fa-paperclip"></i>
                   </label>
-                  <input type="file" id="image" hidden="">
+                  <input type="file" id="image" hidden="" name="image">
                 </div>
               </div>
 
@@ -130,7 +133,7 @@
               </div>
             </form>
           </div>
-
+      {{!-- {{/each}} --}}
 
 
         <!--end form-->

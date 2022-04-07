@@ -63,6 +63,7 @@ body {
 
 .technologies {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .tech-kiri {
@@ -85,28 +86,28 @@ body {
   display: flex;
   align-items: center;
   font-size: 25px;
-  margin: -10px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 
 .node {
   display: flex;
   align-items: center;
   font-size: 25px;
-  margin: -10px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 
 .java {
   display: flex;
   align-items: center;
   font-size: 25px;
-  margin: -11px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 
 .python {
   display: flex;
   align-items: center;
   font-size: 25px;
-  margin: -10px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 
 .paragraf {

@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
   </head>
   <body style="background-color: rgb(230, 230, 230);">
@@ -28,7 +29,7 @@
 
       <div class="nav-right">
         <a href="/register" class="register">Register</a>
-        <a href="/login" class="login">Login</a>
+        <a href="/login" class="login"><strong>Login</strong></a>
         <a href="/form" class="form">Contact Me</a>
       </div>
     </nav>
@@ -38,33 +39,26 @@
 margin-top:100px;
 font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 font-weight: bold;"
-    >GET IN TOUCH</h1>
+    >LOGIN TO YOUR ACCOUNT</h1>
 
     <form
+      action="/login"
+      method="POST"
       style="width: 500px;
 margin: 150px auto;
 margin-top: 90px;"
     >
 
-      <div>
-        <label
-          for="name"
-          style="font-weight:bold;
-        font-size:20px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
-        >Name</label>
-        <input
-          type="text"
-          id="name"
-          style="width: 100%;
-            background-color: white;
-            padding: 10px;
-            border-radius: 8px;
-            border: 1px solid rgb(212, 212, 212);
-            margin-top: 8px;
-            box-shadow: 0px 2px 5px rgb(150, 150, 150);"
-        />
-      </div>
+      {{#if messages.danger}}
+        <div class="alert alert-danger" role="alert">
+          {{messages.danger}}
+        </div>
+      {{/if}}
+      {{#if messages.success}}
+        <div class="alert alert-success" role="alert">
+          {{messages.success}}
+        </div>
+      {{/if}}
 
       <div style="margin-top: 30px;">
         <label
@@ -75,6 +69,7 @@ margin-top: 90px;"
         >Email</label>
         <input
           type="email"
+          name="email"
           id="email-input"
           style="width: 100%;
             background-color: white;
@@ -88,14 +83,15 @@ margin-top: 90px;"
 
       <div style="margin-top: 30px;">
         <label
-          for="phone-number"
+          for="password"
           style="font-weight:bold;
         font-size:20px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
-        >Phone Number</label>
+        >Password</label>
         <input
-          type="number"
-          id="phone-number"
+          type="password"
+          id="password"
+          name="password"
           style="width: 100%;
             background-color: white;
             padding: 10px;
@@ -106,53 +102,9 @@ margin-top: 90px;"
         />
       </div>
 
-      <div style="margin-top: 30px;">
-        <label
-          for="subject-input"
-          style="font-weight:bold;
-        font-size:20px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
-        >Subject</label>
-        <select
-          id="subject-input"
-          style="width: 104.5%;
-            background-color: white;
-            padding: 10px;
-            border-radius: 8px;
-            border: 1px solid rgb(212, 212, 212);
-            margin-top: 8px;
-            box-shadow: 0px 2px 5px rgb(150, 150, 150);"
-        >
-          <option></option>
-          <option>I am Hiring</option>
-          <option>Lets Collaboration</option>
-        </select>
-      </div>
-
-      <div style="margin-top: 30px;">
-        <label
-          for="text-input"
-          style="font-weight:bold;
-        font-size:20px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
-        >Your Message</label>
-        <textarea
-          id="text-input"
-          style="width: 100%;
-            background-color: white;
-            padding: 10px;
-            border-radius: 8px;
-            border: 1px solid rgb(212, 212, 212);
-            margin-top: 8px;
-            height: 120px;
-            resize: vertical;
-            box-shadow: 0px 2px 5px rgb(150, 150, 150);"
-        ></textarea>
-      </div>
-
       <button
         onclick="submitData()"
-        type="button"
+        type="submit"
         style="background-color: rgb(10, 10, 10);
     margin-top: 35px;
     padding: 7px 35px;

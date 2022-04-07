@@ -14,21 +14,33 @@
 <body>
     <!--NavBar-->
     <nav>
-        <div class="nav-left">
-            <img src="public/brandred.png" alt="logo">
-            <ul>
-                <li>
-                    <a href="/home" id="homepage">Home</a>
-                </li>
-                <li>
-                    <a href="/add-blog">My Project</a>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="nav-right">
-            <a href="/form">Contact Me</a>
-        </div>        
+      <div class="nav-left">
+        <img src="public/brandred.png" alt="logo" />
+        <ul>
+          <li>
+            <a href="/home" id="homepage">Home</a>
+          </li>
+          <li>
+            {{#if isLogin}}
+            <a href="/add-blog">My Project</a>
+            {{/if}}
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-right">
+
+        {{#if isLogin}}
+          <a href="#" class="register">Hello,{{user.name}}</a>
+          <a href="/logout" class="register">logout</a>
+        {{else}}
+          <a href="/register" class="register">Register</a>
+          <a href="/login" class="login">Login</a>
+        {{/if}}
+
+        <a href="/form" class="form">Contact Me</a>
+
+      </div>
     </nav>
 
     <!--blog-->
@@ -43,7 +55,7 @@
 
 
             <!--projectName-->
-            <form onsubmit="addProject(event)" action="/add-blog" method="POST">
+            <form onsubmit="addProject(event)" action="/add-blog" method="POST" enctype="multipart/form-data">
               <div class="form-title">
                 <label for="projectName">Project Name</label>
                 <input type="text" class="form-box" id="projectName" name="projectName">
@@ -118,7 +130,8 @@
                     <p>Choose</p>
                     <i class="fa-solid fa-paperclip"></i>
                   </label>
-                  <input type="file" id="image" hidden="">
+                  <input type="file" id="image" hidden=""
+                  name="image" required>
                 </div>
               </div>
 

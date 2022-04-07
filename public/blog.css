@@ -19,7 +19,7 @@ nav {
 
 .nav-left li {
   display: inline;
-  font-weight: 500;
+  font-weight: 100;
 }
 
 .nav-left img {
@@ -45,7 +45,7 @@ nav {
   align-items: center;
 }
 
-.nav-right a {
+.form {
   text-decoration: none;
   color: white;
   background-color: black;
@@ -56,6 +56,19 @@ nav {
   font-size: 16px;
   font-weight: bold;
 }
+
+.register {
+  margin-right: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.login {
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+}
+
 .form-project {
   width: 400px;
   height: 100vh;
