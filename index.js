@@ -33,7 +33,7 @@ app.use(
 );
 
 // ------------------------------------------------------HOMEPAGE-------------------------------------------------------//
-app.get("/home", function (req, res) {
+app.get("/", function (req, res) {
   // console.log(blogs);
 
   if (req.session.isLogin) {
