@@ -58,7 +58,7 @@
             <form onsubmit="addProject(event)" action="/add-blog" method="POST" enctype="multipart/form-data">
               <div class="form-title">
                 <label for="projectName">Project Name</label>
-                <input type="text" class="form-box" id="projectName" name="projectName">
+                <input type="text" class="form-box" id="projectName" name="projectName" required>
               </div>
 
 
@@ -68,11 +68,11 @@
                 <div class="date">
                   <div class="start-date">
                     <label for="startDate">Start Date</label>
-                    <input type="Date" id="startDate" class="form-box" name="startDate">
+                    <input type="Date" id="startDate" class="form-box" name="startDate" required>
                   </div>
                   <div class="end-date">
                     <label for="endDate">End Date</label>
-                    <input type="Date" id="endDate" class="form-box" name="endDate">
+                    <input type="Date" id="endDate" class="form-box" name="endDate" required>
                   </div>
                 </div>
               </div>
@@ -82,7 +82,7 @@
             <!--Description-->
               <div class="form-desc">
                 <label for="description" style="font-weight: bold;">Description</label>
-                <textarea id="description" class="textarea-box" name="description"></textarea>
+                <textarea id="description" class="textarea-box" name="description" required></textarea>
               </div>
       
 
