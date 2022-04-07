@@ -8,7 +8,7 @@ const session = require("express-session");
 const flash = require("express-flash");
 
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 const db = require("./connection/db");
 const { redirect } = require("express/lib/response");
@@ -396,7 +396,7 @@ app.post("/login", function (req, res) {
     });
   });
 });
-
+// ---------------------------------------------logout-------------------------------------------------- //
 app.get("/logout", function (req, res) {
   req.session.destroy();
   res.redirect("/home");
